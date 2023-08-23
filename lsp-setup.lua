@@ -45,7 +45,8 @@ require('mason-lspconfig').setup({
         'tsserver',
         'cssls',
         'html',
-        'lua_ls'
+        'lua_ls',
+        'gopls',
     }
 })
 

@@ -1,17 +1,17 @@
 -- Setup some basic nvim settings
-require("dmediati-nvim-setup.base-settings")
+require("Personal-Neovim-Setup.base-settings")
 
 -- Bootstrap lazy package manager to handle plugins
-require("dmediati-nvim-setup.lazy-init")
+require("Personal-Neovim-Setup.lazy-init")
 
 -- Use lazy to load in all the plugins/packages/dependencies
-require("dmediati-nvim-setup.lazy-plugins")
+require("Personal-Neovim-Setup.lazy-plugins")
 
 -- Customize Telescope
-require("dmediati-nvim-setup.telescope-setup")
+require("Personal-Neovim-Setup.telescope-setup")
 
 -- Setup LSP 
-require("dmediati-nvim-setup.lsp-setup")
+require("Personal-Neovim-Setup.lsp-setup")
 
 -- Setup Treesitter 
-require("dmediati-nvim-setup.treesitter-setup")
+require("Personal-Neovim-Setup.treesitter-setup")
