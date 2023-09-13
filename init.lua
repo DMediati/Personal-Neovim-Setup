@@ -13,5 +13,8 @@ require("Personal-Neovim-Setup.telescope-setup")
 -- Setup LSP 
 require("Personal-Neovim-Setup.lsp-setup")
 
+-- Setup DAP -> Must come after lsp setup since that does require('mason') 
+require("Personal-Neovim-Setup.dap-setup")
+
 -- Setup Treesitter 
 require("Personal-Neovim-Setup.treesitter-setup")

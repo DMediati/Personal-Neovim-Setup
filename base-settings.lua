@@ -56,7 +56,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Retain Clipboard Paste -> deletes highlighted element to void then pastes to avoid overwriting clipboard with deleted line
 vim.keymap.set('x', '<leader>p', "\"_dp")
-vim.keymap.set({'n','v'}, '<leader>d', "\"_d") -- Delete to void to protect cliboard as well 
+vim.keymap.set({'n','v'}, '<leader>dd', "\"_d") -- Delete to void to protect cliboard as well 
 
 -- Diagnostic keymaps to move through errors reported by LSPs, compilers etc.
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })

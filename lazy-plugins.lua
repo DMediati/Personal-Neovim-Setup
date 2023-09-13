@@ -33,7 +33,10 @@ require("lazy").setup({
     },
 
     -- Needed to make LSPs work
-    { 'neovim/nvim-lspconfig'},
+    { 'neovim/nvim-lspconfig' },
+
+    -- Needed to make DAPs work
+    { 'mfussenegger/nvim-dap' },
 
     -- Mason is used to help download LSP servers
     {
@@ -43,27 +46,32 @@ require("lazy").setup({
         end,
     },
 
-    -- Bridge between Mason and nvim-lspconfig
-    {'williamboman/mason-lspconfig.nvim'},
+    -- bridge between mason and nvim-lspconfig
+    { 'williamboman/mason-lspconfig.nvim' },
 
-    -- Required for Autocompletion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'L3MON4D3/LuaSnip'},
+    -- bridge between mason and nvim-dap
+    { 'jay-babu/mason-nvim-dap.nvim' },
+
+    -- nicer ui for nvim-dap
+    { 'rcarriga/nvim-dap-ui' },
+
+    -- required for autocompletion
+    { 'hrsh7th/nvim-cmp' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'l3mon4d3/luasnip' },
 
     {
         "folke/which-key.nvim",
-        event = "VeryLazy",
         init = function()
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
         opts = {
-            -- Leaving default settings 
+            -- leaving default settings 
         }
     },
 
-    -- Git related plugins
+    -- git related plugins
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
 
@@ -78,13 +86,13 @@ require("lazy").setup({
                 changedelete = { text = '~' },
             },
             on_attach = function(bufnr)
-                vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
-                vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
-                vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
+                vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[g]o to [p]revious hunk' })
+                vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[g]o to [n]ext hunk' })
+                vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[p]review [h]unk' })
             end,
         },
     },
 
-    -- Quick comment and comment block
+    -- quick comment and comment block
     'tpope/vim-commentary'
 })
