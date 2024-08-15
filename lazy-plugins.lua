@@ -52,6 +52,9 @@ require("lazy").setup({
     -- bridge between mason and nvim-dap
     { 'jay-babu/mason-nvim-dap.nvim' },
 
+    -- dependency for nvim-dap-ui
+    { 'nvim-neotest/nvim-nio' },
+
     -- nicer ui for nvim-dap
     { 'rcarriga/nvim-dap-ui' },
 

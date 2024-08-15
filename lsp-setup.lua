@@ -40,7 +40,6 @@ require('mason').setup()
 require('mason-lspconfig').setup({
     ensure_installed = {
         'clangd',
-        'pylsp',
         'rust_analyzer',
         'tsserver',
         'cssls',
