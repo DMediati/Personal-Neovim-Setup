@@ -41,7 +41,6 @@ require('mason-lspconfig').setup({
     ensure_installed = {
         'clangd',
         'rust_analyzer',
-        'tsserver',
         'cssls',
         'html',
         'lua_ls',
