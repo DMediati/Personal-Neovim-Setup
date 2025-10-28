@@ -40,14 +40,21 @@ require("lazy").setup({
 
     -- Mason is used to help download LSP servers
     {
-        'williamboman/mason.nvim',
+        'mason-org/mason.nvim',
         build = function()
             pcall(vim.cmd, 'MasonUpdate')
         end,
     },
 
     -- bridge between mason and nvim-lspconfig
-    { 'williamboman/mason-lspconfig.nvim' },
+    {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {},
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
+        },
+    },
 
     -- bridge between mason and nvim-dap
     { 'jay-babu/mason-nvim-dap.nvim' },

@@ -9,7 +9,7 @@ vim.wo.relativenumber = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
--- Always use OS clipboard (don't have to deal wiht * and + registers)
+-- Always use OS clipboard (don't have to deal with * and + registers)
 vim.o.clipboard = 'unnamedplus'
 
 -- Wrapped lines will indent themselves the same amount as the start line to preserve horizontal blocks of text
